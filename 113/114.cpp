@@ -9,8 +9,7 @@ using namespace std;
  
 int input()
 {
-	setlocale(0,"Rus");
-    long long A = 0; 
+	long long A = 0; 
 	char B[1024];
     char C = 0;
 while(1)
@@ -18,37 +17,36 @@ while(1)
 	C = 0;
 	if((!scanf("%1023[^\n]%c",B,&C)) || C != '\n')
 	{
-		if(printf("Число то введи!!!\n"))
+		if(printf("enter the number!!!\n"))
 		getchar();
 	}
 	else
 		if(11 < strlen(B))
 		{
-		printf("Число очень большое\n");
+		printf("very large number\n");
 		}
 		else
 			if(!sscanf(B,"%d%c",&A,&C) || C != '\n')
 			{
-			printf("Ваше число содержит буквы)))\n");
+			printf("your number include the letters)))\n");
 			}
 			else 
 				if(A > INT_MAX)
 				{
-				printf("Введи число немного меньше\n");
+				printf("enter the number less\n");
 				}
 				else
 				return A;
 }}
 int main()
 {
-	setlocale(0,"Rus");
-	cout << "int = " << sizeof(int) << " байт" <<endl;	
-	cout << "введите число в диапазоне от 0" << "  до  " << INT_MAX << " по условию числа только натуральные \n" <<endl;
+	cout << "int = " << sizeof(int) << " byte" <<endl;	
+	cout << "enter the number from 0" << "  to  " << INT_MAX << " only unsigned number \n" <<endl;
 	int n  = input(), count = 0, max = 0, a = 1;
 while (n != 1)
 {	
 	cout << n << " ";
-	cout << a << " значение " <<endl;
+	cout << a << " number " <<endl;
 	if (!(n % 2))
 	{
 		n /= 2;
@@ -65,8 +63,8 @@ while (n != 1)
 		count++;
 		a++;
 }
-		cout << endl << "Количество шагов = " << count << ' ' << "максимальное значение = " << max << endl;
-		cout << "нажмите любую клавишу" <<endl;
+		cout << endl << "steps = " << count << ' ' << "max = " << max << endl;
+		cout << "enter any key" <<endl;
 		getch();
 return 0;
 }
